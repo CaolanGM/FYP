@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gaffneca.fypfirebase.ViewOtherProfile">
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:id="@+id/drawerWin"
+        android:visibility="gone"
+        >
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/header"
+            app:itemIconTint="#ddd"
+            app:menu="@menu/drawermenu"
+            android:layout_gravity = "start"
+
+            >
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <RelativeLayout
+        android:id="@+id/barTool"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#31FF"
+        android:elevation="10dp"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ic_menu"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_hamburger"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_back"
+
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="#000"
+            android:text="Passenger's Profile"
+            />
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:id="@+id/logout"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_logout"
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/logoutTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="LOG OUT"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:layout_below="@id/barTool"
+        android:layout_alignParentEnd="true"
+        android:textColor="#000"
+        android:background="#eee"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="441dp"
+                app:srcCompat="@color/common_google_signin_btn_text_dark_disabled"
+                tools:layout_editor_absoluteX="-7dp"
+                tools:layout_editor_absoluteY="55dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvWelcomeMsg"
+                android:text="Name"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView"
+                android:editable="false" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etName"
+                android:text="Rating"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RatingBar
+                android:id="@+id/ratBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etName"
+                android:layout_toEndOf="@+id/tvName"
+                android:numStars="5"
+                android:stepSize="0.1"/>
+
+
+            <EditText
+                android:id="@+id/etRat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ratBar"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/ratBar"
+                android:layout_toEndOf="@+id/ratBar"
+                android:editable="false"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/revHead"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Reviews"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <ScrollView
+                android:id="@+id/reviewList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/revHead"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/revLinLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

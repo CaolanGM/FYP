@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "715084975544",
+    "firebase_url": "https://fyp-firebase-e6552.firebaseio.com",
+    "project_id": "fyp-firebase-e6552",
+    "storage_bucket": "fyp-firebase-e6552.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715084975544:android:db498e20f4bd4597",
+        "android_client_info": {
+          "package_name": "com.example.gaffneca.fypfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715084975544-pbaat71djpfsevn8ga0cqmp2c9e245vr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gaffneca.fypfirebase",
+            "certificate_hash": "77b8a199f68e2b71c0aec2addc85269f676c093a"
+          }
+        },
+        {
+          "client_id": "715084975544-5ue1oj156ihtqdup04g3h8mqvamb97pq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gaffneca.fypfirebase",
+            "certificate_hash": "2d04284462b77d91c6d2b7845d2a188f0524387b"
+          }
+        },
+        {
+          "client_id": "715084975544-dald5gqq7bkvjoffadbrbdt04o9oa8aq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCpC--b-ruhDPn-0xsNFrbFnk8mJWYUUQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715084975544-dald5gqq7bkvjoffadbrbdt04o9oa8aq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

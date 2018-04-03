@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FYPFirebase</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="tab">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
+</resources>

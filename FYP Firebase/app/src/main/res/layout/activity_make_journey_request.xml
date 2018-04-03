@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#eee">
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:id="@+id/drawerWin"
+        >
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/header"
+            app:itemIconTint="#ddd"
+            app:menu="@menu/drawermenu"
+            android:layout_gravity = "start"
+
+            >
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <RelativeLayout
+        android:id="@+id/barTool"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#22009999"
+        android:elevation="10dp"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="#000"
+            android:text="Make Journey Request"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ic_menu"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_hamburger"
+            />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_back"
+            android:visibility="gone"
+
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:id="@+id/logout"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_logout"
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/logoutTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="LOG OUT"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:layout_below="@id/barTool"
+        android:layout_alignParentEnd="true"
+        android:textColor="#000"
+        android:background="#eee"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+
+        />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0000">
+
+    <ScrollView
+        android:layout_marginTop="40dp"
+        android:id="@+id/mjrscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bSend"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/dateSec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:elevation="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/datehead"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:paddingTop="15dp"
+                    android:text="Date and Time"
+                    android:textColor="@android:color/black" />
+
+                <View
+                    android:id="@+id/dateline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+
+                    android:layout_below="@+id/datehead"
+                    android:background="@android:color/black" />
+
+                <Button
+                    android:id="@+id/bdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/dateline"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#9900cddc"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Choose Date/Time"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tvdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/bdate"
+                    android:layout_alignTop="@+id/bdate"
+                    android:layout_toEndOf="@+id/bdate"
+                    android:paddingStart="15dp"
+                    android:text="No Date/Time Selected" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/locSec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateSec"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:background="#fff"
+                android:elevation="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/lochead"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:paddingTop="15dp"
+                    android:text="Pick Up and Drop Off Points"
+                    android:textColor="@android:color/black" />
+
+                <View
+                    android:id="@+id/locline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/lochead"
+                    android:background="@android:color/black"
+                    android:paddingBottom="20dp" />
+
+
+                <TextView
+                    android:id="@+id/etStart"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/locline"
+                    android:ems="10"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingTop="20dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/etEnd"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/etStart"
+                    android:maxLines="1"
+                    android:paddingStart="10dp" />
+
+                <Button
+                    android:id="@+id/routeBut"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/locline"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/etStart"
+                    android:background="#9900cddc"
+                    android:bottomLeftRadius="50dp"
+                    android:bottomRightRadius="50dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Select Route"
+                    android:textColor="#fff"
+                    android:topLeftRadius="50dp"
+                    android:topRightRadius="50dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/passSec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locSec"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:background="#fff"
+                android:elevation="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/passhead"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:paddingTop="15dp"
+                    android:text="Passengers"
+
+                    android:textColor="@android:color/black" />
+
+                <View
+                    android:id="@+id/passline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/passhead"
+                    android:background="@android:color/black"
+                    android:paddingBottom="20dp" />
+
+                <TextView
+                    android:id="@+id/passText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/passline"
+                    android:layout_marginStart="12dp"
+                    android:gravity="center"
+                    android:text="Number of passengers: " />
+
+                <RadioGroup
+                    android:id="@+id/passSel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/passline"
+                    android:layout_toRightOf="@+id/passText"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:onClick="checkButton"
+                        android:paddingRight="10dp"
+                        android:text="1"
+
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rb02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="checkButton"
+                        android:paddingRight="10dp"
+                        android:text="2" />
+
+                    <RadioButton
+                        android:id="@+id/rb03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="checkButton"
+                        android:paddingRight="10dp"
+                        android:text="3"
+
+                        />
+
+
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/costSec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passSec"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:background="#fff"
+                android:elevation="20dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/costhead"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:paddingTop="15dp"
+                    android:text="Your Cost"
+                    android:textColor="@android:color/black" />
+
+                <View
+                    android:id="@+id/costline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/costhead"
+                    android:background="@android:color/black"
+                    android:paddingBottom="20dp" />
+
+
+                <TextView
+                    android:id="@+id/euro"
+                    android:layout_width="30dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/costline"
+                    android:gravity="center"
+                    android:text="€"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/proposedCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/costline"
+                    android:layout_toRightOf="@+id/space3"
+                    android:paddingStart="50dp"
+                    android:paddingTop="10dp" />
+
+                <TextView
+                    android:id="@+id/space3"
+                    android:layout_width="30dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/costline"
+                    android:layout_toRightOf="@+id/etCost"
+                    android:gravity="center"
+                    android:textColor="@android:color/black" />
+
+                <NumberPicker
+                    android:id="@+id/etCost"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/costline"
+                    android:layout_toRightOf="@+id/euro"
+                    android:editable="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Time Spent"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/space2"
+                    android:layout_width="30dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/costline"
+                    android:gravity="center"
+                    android:textColor="@android:color/black" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/durSec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/costSec"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:background="#fff"
+                android:elevation="20dp"
+                android:paddingBottom="10dp">
+
+
+                <TextView
+                    android:id="@+id/durhead"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:paddingTop="15dp"
+                    android:text="Your Duration"
+                    android:textColor="@android:color/black" />
+
+                <View
+                    android:id="@+id/durline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/durhead"
+                    android:background="@android:color/black"
+                    android:paddingBottom="20dp" />
+
+                <TextView
+                    android:id="@+id/space"
+                    android:layout_width="30dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/durline"
+                    android:gravity="center" />
+
+                <NumberPicker
+                    android:id="@+id/etTime"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/durline"
+                    android:layout_toRightOf="@+id/space"
+                    android:editable="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="Cost"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/min"
+                    android:layout_width="30dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/durline"
+                    android:layout_toRightOf="@+id/etTime"
+                    android:gravity="center"
+                    android:text="min"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/proposedDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/durline"
+                    android:layout_toRightOf="@+id/min"
+                    android:paddingStart="50dp"
+                    android:paddingTop="10dp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/lugSec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/durSec"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:background="#fff"
+                android:elevation="20dp"
+                android:paddingBottom="10dp">
+
+
+                <TextView
+                    android:id="@+id/lughead"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:paddingTop="15dp"
+                    android:text="Your Baggage"
+                    android:textColor="@android:color/black" />
+
+                <View
+                    android:id="@+id/lugline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/lughead"
+                    android:background="@android:color/black"
+                    android:paddingBottom="20dp" />
+
+                <TextView
+                    android:id="@+id/bagText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/lugline"
+                    android:layout_marginStart="12dp"
+                    android:gravity="center"
+                    android:text="Number of bags: " />
+
+                <RadioGroup
+                    android:id="@+id/bagSel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/lugline"
+                    android:layout_toRightOf="@+id/bagText"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:onClick="checkButton"
+                        android:paddingRight="10dp"
+                        android:text="0"
+
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="checkButton"
+                        android:paddingRight="10dp"
+                        android:text="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="checkButton"
+                        android:paddingRight="10dp"
+                        android:text="2"
+
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rb3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="checkButton"
+                        android:paddingRight="10dp"
+                        android:text="3"
+
+                        />
+
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/bSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="19dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="#fff"
+        android:text="Send Journey Request" />
+
+
+
+
+
+</RelativeLayout>
+
+
+</RelativeLayout>

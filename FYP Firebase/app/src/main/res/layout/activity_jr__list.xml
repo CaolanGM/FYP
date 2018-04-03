@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7ddd"
+    tools:context="com.example.gaffneca.fypfirebase.JR_List">
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:id="@+id/drawerWin"
+        >
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/header"
+            app:itemIconTint="#ddd"
+            app:menu="@menu/drawermenu"
+            android:layout_gravity = "start"
+
+            >
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <RelativeLayout
+        android:id="@+id/barTool"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#22009999"
+        android:elevation="10dp"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="#000"
+            android:text="Your Journey Requests"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ic_menu"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_hamburger"
+            />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_back"
+            android:visibility="gone"
+
+            />
+
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:id="@+id/logout"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_logout"
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/logoutTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="LOG OUT"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:layout_below="@id/barTool"
+        android:layout_alignParentEnd="true"
+        android:textColor="#000"
+        android:background="#eee"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+
+        />
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:id="@+id/linlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/tvAnyJR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="You have not made any Journey Requests"
+                android:paddingTop="250dp"
+                android:gravity="center"
+                android:visibility="visible"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
